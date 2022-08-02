@@ -6,7 +6,7 @@ import unittest
 
 class TestInputs(unittest.TestCase):
 
-    def test_1(self, link):
+    def test_1(self):
         try:
             link = "http://suninjuly.github.io/registration1.html"
             browser = webdriver.Chrome()
@@ -27,12 +27,11 @@ class TestInputs(unittest.TestCase):
             self.assertEqual("Congratulations! You have successfully registered!", welcome_text)
 
         finally:
-            time.sleep(10)
             browser.quit()
 
     def test_2(self):
         try:
-            link = "http://suninjuly.github.io/registration1.html"
+            link = "http://suninjuly.github.io/registration2.html"
             browser = webdriver.Chrome()
             browser.get(link)
 
@@ -51,10 +50,8 @@ class TestInputs(unittest.TestCase):
             self.assertEqual("Congratulations! You have successfully registered!", welcome_text)
 
         finally:
-            time.sleep(10)
             browser.quit()
 
 
 if __name__ == "__main__":
     unittest.main()
-
